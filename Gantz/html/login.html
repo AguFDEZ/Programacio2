@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantz guide</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cl-icon/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form" onsubmit="return login()">
+            <h1 class="title">Inicio</h1>
+            <div class="inp">
+                <input type="text" id="username" class="input" placeholder="Usuario">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="inp">
+                <input type="password" id="password" class="input" placeholder="Contraseña">
+                <i class="fas fa-lock"></i>
+            </div>
+            <button type="submit" class="submit">Iniciar Sesión</button>
+            <p class="footer">No tienes cuenta? <a href="#" class="link">Por favor, registrarse</a></p>
+        </form>
+        <div></div>
+        <div class="banner">
+            <h1 class="wel_text">BIENVENIDO</br></h1>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var allowedUsers = [
+                { username: 'usuario1', password: 'contrasena1' },
+                { username: 'usuario2', password: 'contrasena2' }
+            ];
+
+            var loggedIn = false;
+
+            for (var i = 0; i < allowedUsers.length; i++) {
+                if (allowedUsers[i].username === username && allowedUsers[i].password === password) {
+                    loggedIn = true;
+                    break;
+                }
+            }
+
+            if (loggedIn) {
+                alert('Inicio de sesión exitoso');
+                window.location.href='index.html';
+            } else {
+                alert('Usuario denegado');
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>

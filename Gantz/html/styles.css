@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+section{
+    background-color:#333333 ;
+}
+body{
+    margin: 0;
+    font-family: Impact, sans-serif;
+    background-color: black;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em}
+h3{font-size: 2em;}
+p{font-family: 'Roboto', sans-serif; color: white;  font-size: 1.25em;}
+
+button{ 
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0, 0, 5);
+    box-shadow: 2px 2px 10px rgba(0,0, 0, 5);
+    color:white;
+    background-color: #DC143C;
+}
+button:hover{ 
+    background-color:#5e0e1e
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+}
+header{
+    background-color: #333333;
+    color: #DC143C;
+}
+a{
+    font-family: 'Roboto', sans-serif ;
+    color: #DC143C;
+}
+ header .logo{
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: #DC143C;
+  font-size: 1.6em;
+ }
+
+ header .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ header nav{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+ }
+
+ header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #DC143C;
+  font-size: 1.5em;
+ }
+
+ heada a:hover{
+  color: #5e0e1e;
+ }
+ #Introducción .container{
+  text-align: center;
+  padding: 200px 12px;
+  color: #ffffff;
+ }
+
+ @media (min-width: 720px){
+  header{
+    position: fixed;
+    width: 100%;
+  }
+  header .container{
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+  header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+  #Introducción{
+    display: flex;
+    text-align: initial;
+    padding: 0px ;
+  }
+ }
+
+ 
+
+
